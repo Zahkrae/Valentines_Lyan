@@ -125,14 +125,9 @@ button:active {
     height: 100%;
 }
 
-.center-text-page .window-header {
-    margin-bottom: 20px;
-}
-
 .center-text-page .option-container {
     position: absolute;
     bottom: 30px;
-    right: 30px;
 }
 
 /* Placeholder Images for Home, Game Over, and Success Screens */
