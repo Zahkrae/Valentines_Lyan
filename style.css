@@ -12,7 +12,7 @@ body {
     height: 100vh;
 }
 
-/* Windowed Placeholder Background */
+/* Generic Window Style */
 .window {
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     border: 3px solid #808080;
@@ -37,11 +37,32 @@ body {
     padding: 5px;
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 2px solid #808080;
     width: 100%;
-    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+}
+
+/* Home Page Specific Styles */
+.home-page .window {
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+.home-page .option-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.home-page .option-container button {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
 }
 
 /* General Button Styling */
