@@ -1,3 +1,4 @@
+<!-- gameover.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Oops! Wrong choice!</h1>
-        <p>Try again?</p>
-        <button onclick="restartGame()">Restart</button>
+    <div class="window center-text-page">
+        <div class="window-header">Game Over</div>
+        <div class="top-images">
+            <img src="images/gameover1.png" alt="Game Over Image 1">
+            <img src="images/gameover2.png" alt="Game Over Image 2">
+            <img src="images/gameover3.png" alt="Game Over Image 3">
+        </div>
+        <p>Oops! Try again?</p>
+        <div class="option-container">
+            <a href="index.html"><button>Restart</button></a>
+        </div>
     </div>
-    <script>
-        function restartGame() {
-            window.location.href = 'index.html';
-        }
-    </script>
 </body>
 </html>
