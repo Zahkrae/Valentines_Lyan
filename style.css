@@ -1,7 +1,9 @@
 /* Windows XP Retro Style */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Pixelated font */
+
 body {
-    background: #008080; /* Classic XP teal background */
-    font-family: 'Tahoma', sans-serif;
+    background: #ffd1dc; /* Pastel Pink Background */
+    font-family: 'Press Start 2P', cursive; /* Retro Pixel Font */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,9 +12,10 @@ body {
     height: 100vh;
 }
 
+/* Windowed Placeholder Background */
 .window {
-    background: #ece9d8; /* XP window background */
-    border: 2px solid #808080;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border: 3px solid #808080;
     border-radius: 5px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     width: 600px;
@@ -20,8 +23,11 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Header Bar for Retro Window Style */
 .window-header {
     background: linear-gradient(to bottom, #000080, #1e90ff);
     color: white;
@@ -31,37 +37,11 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #808080;
-}
-
-.window-header .title {
-    margin-left: 10px;
-}
-
-.window-header .buttons {
-    display: flex;
-    gap: 3px;
-    margin-right: 5px;
-}
-
-.window-header .buttons div {
-    width: 12px;
-    height: 12px;
-    background: red;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-.window-content {
-    flex: 1;
-    padding: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     text-align: center;
 }
 
+/* General Button Styling */
 button {
     background: linear-gradient(to bottom, #dcdcdc, #a9a9a9);
     border: 2px solid #808080;
@@ -80,4 +60,83 @@ button:hover {
 button:active {
     box-shadow: none;
     transform: translate(2px, 2px);
+}
+
+/* Style for All Question Pages */
+.question-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+}
+
+.question-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.option-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.option {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #808080;
+    padding: 10px;
+}
+
+.option img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Home, Game Over, and Success Screens */
+.center-text-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.center-text-page .window-header {
+    margin-bottom: 20px;
+}
+
+.center-text-page .option-container {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* Placeholder Images for Home, Game Over, and Success Screens */
+.center-text-page .top-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 20px;
+}
+
+.center-text-page .top-images img {
+    width: 100px;
+    height: auto;
 }
