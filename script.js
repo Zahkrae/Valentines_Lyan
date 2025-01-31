@@ -1,4 +1,8 @@
+console.log("Script loaded successfully!");
+
 function playAlert(option) {
+	console.log("Button clicked:", option); // Debugging log
+	
     let messages = {
         "option1_1": { text: "Great choice!", sound: "sounds/correct.mp3", next: "question2.html" },
         "option1_2": { text: "Nice pick!", sound: "sounds/correct.mp3", next: "question2.html" },
@@ -18,12 +22,18 @@ function playAlert(option) {
     };
 
     if (messages[option]) {
-        let audio = new Audio(messages[option].sound);
-        audio.play();
+		  console.log("Message found:", messages[option]); // Debugging log
+         let audio = new Audio(messages[option].sound);
+        audio.play().catch(error => console.log("Audio error:", error)); // Debugging log
+
+        alert(messages[option].text);
+
         setTimeout(() => {
-            alert(messages[option].text);
-            setTimeout(() => {
             window.location.href = messages[option].next;
         }, 3000);
+    } else {
+        console.log("Invalid option clicked.");
     }
 }
+
+console.log("playAlert function:", typeof playAlert);
