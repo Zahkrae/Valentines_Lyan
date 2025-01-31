@@ -16,11 +16,13 @@ function playAlert(option) {
         'option4_2': { text: "Nice pick!", sound: "sounds/wrong.mp3", next: "gameover.html" },
 
     };
-    
+
     if (messages[option]) {
         let audio = new Audio(messages[option].sound);
         audio.play();
-        alert(messages[option].text);
-        window.location.href = messages[option].next;
+        setTimeout(() => {
+            alert(messages[option].text);
+            window.location.href = messages[option].next;
+        }, 100); // Delay to allow sound to start playing
     }
 }
