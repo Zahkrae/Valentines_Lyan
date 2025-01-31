@@ -12,7 +12,7 @@ body {
     height: 100vh;
 }
 
-/* Windowed Placeholder Background */
+/* Adjusting the window background to be more rectangular with less height */
 .window {
     background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     border: 3px solid #808080;
@@ -20,28 +20,46 @@ body {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     width: 80%;
     max-width: 800px;
-    height: 80%;
-    max-height: 600px;
+    height: 60%; /* Adjusted to be less tall */
+    max-height: 500px; /* Adjusted max-height */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the top */
     padding: 20px;
 }
 
-/* Header Bar for Retro Window Style */
+/* Adjusting the header to align closer to the top of the window */
 .window-header {
     background: linear-gradient(to bottom, #000080, #1e90ff);
     color: white;
     padding: 5px;
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 2px solid #808080;
     width: 100%;
     text-align: center;
+    margin-bottom: 20px; /* Added margin to move it down slightly */
+}
+
+/* Apply styles only to the homepage button */
+.homepage-button {
+    background: linear-gradient(to bottom, #dcdcdc, #a9a9a9);
+    border: 2px solid #808080;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px black;
+    outline: none;
+    width: 120px; /* Adjust width to make the button rectangular */
+    height: 40px; /* Adjust height for a smaller size */
+    position: absolute;
+    bottom: 30px; /* Positioning at the bottom */
+    right: 30px; /* Positioning at the right */
 }
 
 /* General Button Styling */
