@@ -181,33 +181,30 @@ button:active {
 .prizes-container {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Increased spacing between images */
+    gap: 50px; /* Adds space between images */
     margin-top: 50px;
 }
 
 .prize-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .prize-image {
-    width: 250px; /* Larger image size */
+    width: 200px; /* Adjust size as needed */
     height: auto;
-    border: 3px solid #808080;
-    border-radius: 10px;
 }
 
 .prize-title {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
-.prize-text-container {
-    margin-top: 50px; /* Increased margin to push the text further down */
+.prize-text-wrapper {
+    text-align: center;
+    margin-top: 40px; /* Adds space between images and text */
 }
 
 .prize-claim-text {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
 }
